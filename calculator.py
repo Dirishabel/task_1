@@ -3,6 +3,7 @@
             symbol - строковое представление введенного числа.
        Return: 
             success - Являлся ли символ числом.
+            error - Ошибка для описания.
             symbol - Символ преобразованный в число.
     """
 def checker(data):
@@ -47,8 +48,7 @@ result_enter = checker(enter)
 while not result_enter.get('success'):
     enter = input('{}попробуйте еще раз: '.format(result_enter.get('error')))
     result_enter = checker(enter)
-else: 
-    result = result_enter.get('symbol')
+result = result_enter.get('symbol')
 while(1):
     enter = input().split(' ')
     if enter[0] == '=':
